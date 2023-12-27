@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
-
+namespace App\Http\Controllers\Api\V1;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreCustomerRequest extends FormRequest
