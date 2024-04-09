@@ -15,21 +15,9 @@ class InvoiceController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
-
+    public function index()
     {
-        $filter = new CustomerQuery();
-        $queryItems = $filter->transform($request);
-
-        if(count($queryItems) == 0){
-
-         return new InvoiceCollection(Invoice::paginate());
-
-        }else{
-
-        return new CustomerCollection(Customer::where($queryItems)->paginate());
-        }
-     
+        return new InvoiceCollection(Invoice::paginate());
     }
 
     /**
